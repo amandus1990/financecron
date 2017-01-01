@@ -1,3 +1,4 @@
+# tvswap: time,volume,state weighted average price
 # sst: state,space,time weighted average price
 # 算法的思想是通过加权方法计算“真实平均价格”，权重的三个方面包括：状态权重，交易量（空间）权重，以及时间权重
 # 状态权重为过去成交价与现在成交价的价差，价差小则过去交易的持仓不容易改变，所以权重高
