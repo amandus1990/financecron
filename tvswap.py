@@ -10,7 +10,7 @@ import math
 from pandas import Series
 
 # 函数中的第一个参数是从tushare下载的一只个股的完整历史数据，第二个参数是算法中计算时间权重时使用的时间窗口的大小
-def sst_average_p(rawdata,timelen):
+def tvswap(rawdata,timelen):
     list=[];
     reslen=len(rawdata)-timelen;
     for i in range(0,reslen):
@@ -25,5 +25,5 @@ def sst_average_p(rawdata,timelen):
             tamount+=current_p*current_w;
         list.append(tamount/tweight);
     res=Series(list,index=rawdata.index[0:reslen]);
-    res.name='averagep';
+    res.name='tvswap';
     return(res);
