@@ -27,3 +27,6 @@ def tvswap(rawdata,timelen):
     res=Series(list,index=rawdata.index[0:reslen]);
     res.name='tvswap';
     return(res);
+
+def tvswastd(rawdata,timelen):
+    return(0);
