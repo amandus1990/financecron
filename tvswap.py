@@ -50,5 +50,5 @@ def tvswastd(rawdata,timelen):
             tamount+=(current_p-price)**2*current_w;
         list.append(math.sqrt(tamount/tweight));
     res=Series(list,index=rawdata.index[0:reslen]);
-    res.name='tvswap';
+    res.name='tvswastd';
     return(res);
