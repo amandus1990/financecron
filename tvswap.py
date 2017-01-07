@@ -6,6 +6,13 @@
 # 在以下实现中，current_w中的状态权重为：math.exp(-abs(price - current_p))，交易量权重为：(rawdata.volume[index])，时间权重为：j;
 # 可调整权重的具体实现方式，而建模思想相同。
 
+# 两种好情况：
+# (1)p线主导，p线高于tvswap，tvswastd小
+# (2)tvswap主导，tvswap高于p线，tvswastd大
+# 两种“坏”情况：
+# (1)p线主导，p线低于tvswap，tvswastd大
+# (2)tvswap主导，tvswap低于p线，tvswastd小
+
 import math
 from pandas import Series
 
